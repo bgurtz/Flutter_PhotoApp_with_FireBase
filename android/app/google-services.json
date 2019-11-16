@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "538409672786",
+    "firebase_url": "https://flutter-photoapp-firebase-back.firebaseio.com",
+    "project_id": "flutter-photoapp-firebase-back",
+    "storage_bucket": "flutter-photoapp-firebase-back.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538409672786:android:072b4b7d6acce39d8ebf8b",
+        "android_client_info": {
+          "package_name": "com.example.flutter_photo_app_with_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "538409672786-nj5js344f3a0jhgaoh1qetbed0qga633.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoQuG9Otz-m2a1b0yc4vF4Peow9nqS2dk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "538409672786-nj5js344f3a0jhgaoh1qetbed0qga633.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
