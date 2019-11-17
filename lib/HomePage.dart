@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:async';
+import './DetailPage.dart';
+
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -46,6 +48,9 @@ class _HomeState extends State<Home> {
   }
   // End of the FireBase connect code for the TopPost
 
+  passData (DocumentSnapshot snap) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>DetailPage(snapshot: snap,)));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -191,12 +196,23 @@ class _HomeState extends State<Home> {
                               backgroundColor: Colors.brown[200],
                               foregroundColor: Colors.white,
                             ),
+
                             SizedBox(width: 10.0,),
+                            InkWell(
+                              child: Text(sdSnapshot[index].data["title"],
+                              style: TextStyle(fontSize: 20.0, color: Colors.blue[600]),
+                              ), 
+                              onTap: () {
+                                passData(sdSnapshot[index]);
+                              },
+                            ),
+
                             Text(sdSnapshot[index].data["title"],
                               style: TextStyle(fontSize: 20.0, color: Colors.blue[600]),
                             ),
                           ],
                         ),
+
                         SizedBox(height: 10.0,),
                         Column(
                           children: <Widget>[
@@ -215,10 +231,10 @@ class _HomeState extends State<Home> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Icon(Icons.share),
-                                Icon(Icons.thumb_up),
-                                Icon(Icons.thumb_down),
-                                Icon(Icons.favorite),
+                                Icon(Icons.share, color: Colors.blue,),
+                                Icon(Icons.thumb_up, color: Colors.green,),
+                                Icon(Icons.thumb_down, color: Colors.black54,),
+                                Icon(Icons.favorite, color: Colors.red,),
                               ],
                             ),
 
