@@ -206,10 +206,6 @@ class _HomeState extends State<Home> {
                                 passData(sdSnapshot[index]);
                               },
                             ),
-
-                            Text(sdSnapshot[index].data["title"],
-                              style: TextStyle(fontSize: 20.0, color: Colors.blue[600]),
-                            ),
                           ],
                         ),
 
